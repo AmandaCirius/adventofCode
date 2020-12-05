@@ -34,15 +34,15 @@ public class FifthDecember extends December {
             seatIds.add((row * 8) + column);
         });
         OptionalInt max = seatIds.stream().mapToInt(Integer::intValue).max();
-        System.out.println(max.getAsInt());
+        System.out.println("Max seat id: " + max.getAsInt());
     }
 
     private int checkRows(String boardingPass) {
         rows = createRows();
         final String substring = boardingPass.substring(0, 7);
         final char[] chars = substring.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
-            if (chars[i] == 'F') {
+        for (char aChar : chars) {
+            if (aChar == 'F') {
                 rows = rows.subList(0, rows.size() / 2);
             } else {
                 rows = rows.subList(rows.size() / 2, rows.size());
@@ -59,8 +59,8 @@ public class FifthDecember extends December {
         columns = createColumns();
         final String substring = boardingPass.substring(7);
         final char[] chars = substring.toCharArray();
-        for (int i = 0; i < chars.length; i++) {
-            if (chars[i] == 'L') {
+        for (char aChar : chars) {
+            if (aChar == 'L') {
                 columns = columns.subList(0, columns.size() / 2);
             } else {
                 columns = columns.subList(columns.size() / 2, columns.size());
@@ -69,7 +69,6 @@ public class FifthDecember extends December {
         if (columns.size() == 1) {
             return columns.get(0);
         } else {
-            System.out.println("columns not size 1");
             return 0;
         }
     }
@@ -95,7 +94,7 @@ public class FifthDecember extends December {
         Collections.sort(seatIds);
         for (int i = 0; i < seatIds.size() - 1; i++) {
             if (seatIds.get(i) + 1 != seatIds.get(i + 1)) {
-                System.out.println("Missing seat :" + seatIds.get(i) + 1);
+                System.out.println("Missing seat: " + (seatIds.get(i) + 1));
             }
         }
     }

@@ -22,7 +22,7 @@ public class FourthDecember extends December {
             StringBuilder stringBuilder = new StringBuilder();
             while ((line = reader.readLine()) != null) {
                 if (!line.equals("")) {
-                    stringBuilder.append(line + " ");
+                    stringBuilder.append(line).append(" ");
                 } else {
                     passports.add(stringBuilder.toString());
                     stringBuilder = new StringBuilder();
@@ -87,7 +87,7 @@ public class FourthDecember extends December {
 
     private boolean byrRule(String passport) {
         final String[] split = passport.split("byr:");
-        final String[] s = split[1].split("(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)");
+        final String[] s = split[1].split(" ");
         String birthYear = s[0];
         if (birthYear.length() == 4) {
             return parseInt(birthYear) <= 2002 && parseInt(birthYear) >= 1920;
@@ -98,7 +98,7 @@ public class FourthDecember extends December {
     private boolean iyrRule(String passport) {
         final String[] split = passport.split("iyr:");
         if (split.length > 1) {
-            final String[] s = split[1].split("(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)");
+            final String[] s = split[1].split(" ");
             final String issueYear = s[0];
             if (issueYear.length() == 4) {
                 return parseInt(issueYear) <= 2020 && parseInt(issueYear) >= 2010;
@@ -110,7 +110,7 @@ public class FourthDecember extends December {
     private boolean eyrRule(String passport) {
         final String[] split = passport.split("eyr:");
         if (split.length > 1) {
-            final String[] s = split[1].split("(?<=\\D)(?=\\d)|(?<=\\d)(?=\\D)");
+            final String[] s = split[1].split(" ");
             final String expirationYear = s[0];
             if (expirationYear.length() == 4) {
                 return parseInt(expirationYear) <= 2030 && parseInt(expirationYear) >= 2020;

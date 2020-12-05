@@ -32,11 +32,11 @@ public class SecondDecember extends December {
     }
 
     void part1() {
-        final List<Password> validPasswords = passwords.stream().filter(SecondDecember::check1).collect(Collectors.toList());
+        final List<Password> validPasswords = passwords.stream().filter(this::check1).collect(Collectors.toList());
         System.out.println("Number of valid passwords part 1: " + validPasswords.size());
     }
 
-    private static boolean check1(Password password) {
+    private boolean check1(Password password) {
         if (!password.getPassword().contains(valueOf(password.getCharacter()))) {
             return false;
         }
@@ -51,11 +51,11 @@ public class SecondDecember extends December {
     }
 
     void part2() {
-        final List<Password> validPasswords = passwords.stream().filter(SecondDecember::check2).collect(Collectors.toList());
+        final List<Password> validPasswords = passwords.stream().filter(this::check2).collect(Collectors.toList());
         System.out.println("Number of valid passwords part 2: " + validPasswords.size());
     }
 
-    private static boolean check2(Password password) {
+    private boolean check2(Password password) {
         if (!password.getPassword().contains(valueOf(password.getCharacter()))) {
             return false;
         }

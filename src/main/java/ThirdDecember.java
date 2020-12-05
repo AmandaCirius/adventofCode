@@ -25,24 +25,12 @@ public class ThirdDecember extends December {
             final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputfile)));
             String line;
             while ((line = reader.readLine()) != null) {
-                StringBuilder builder = new StringBuilder();
-                builder.append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line)
-                        .append(line).append(line).append(line).append(line).append(line);
-                map.add(builder.toString());
+                String mapLine = line + line + line + line + line + line + line + line + line + line + line + line + line + line + line
+                        + line + line + line + line + line + line + line + line + line + line + line + line + line + line + line + line
+                        + line + line + line + line + line + line + line + line + line + line + line + line + line + line + line + line
+                        + line + line + line + line + line + line + line + line + line + line + line + line + line + line + line + line
+                        + line + line + line + line + line + line + line + line + line + line + line + line + line + line + line + line;
+                this.map.add(mapLine);
             }
         } catch (IOException e) {
             System.out.println("Could not load file..");
