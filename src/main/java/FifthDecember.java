@@ -94,7 +94,7 @@ public class FifthDecember extends December {
         Collections.sort(seatIds);
         for (int i = 0; i < seatIds.size() - 1; i++) {
             if (seatIds.get(i) + 1 != seatIds.get(i + 1)) {
-                System.out.println("Missing seat: " + (seatIds.get(i) + 1));
+                System.out.println("Missing seat: " + seatIds.get(i + 1));
             }
         }
     }

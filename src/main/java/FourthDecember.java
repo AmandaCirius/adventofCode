@@ -36,7 +36,7 @@ public class FourthDecember extends December {
 
     void part1() {
         final List<String> collect = passports.stream().filter(this::match).collect(toList());
-        System.out.println("Valid passports par 1: " + collect.size());
+        System.out.println("Valid passports part 1: " + collect.size());
     }
 
     private boolean match(String passport) {
@@ -51,7 +51,7 @@ public class FourthDecember extends December {
 
     void part2() {
         final List<String> collect = passports.stream().filter(this::match2).collect(toList());
-        System.out.println("Valid passports par 2: " + collect.size());
+        System.out.println("Valid passports part 2: " + collect.size());
     }
 
     private boolean match2(String passport) {
@@ -152,8 +152,13 @@ public class FourthDecember extends December {
         if (split.length > 1) {
             final String[] s = split[1].split(" ");
             final String eyeColour = s[0];
-            return eyeColour.equals("amb") || eyeColour.equals("blu") || eyeColour.equals("brn") || eyeColour.equals("gry")
-                    || eyeColour.equals("grn") || eyeColour.equals("hzl") || eyeColour.equals("oth");
+            return eyeColour.equals("amb")
+                    || eyeColour.equals("blu")
+                    || eyeColour.equals("brn")
+                    || eyeColour.equals("gry")
+                    || eyeColour.equals("grn")
+                    || eyeColour.equals("hzl")
+                    || eyeColour.equals("oth");
         }
         return false;
     }
