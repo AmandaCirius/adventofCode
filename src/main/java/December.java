@@ -6,7 +6,7 @@ public abstract class December {
         part2();
     }
 
-    abstract void setUp(String inputfile);
+    abstract void setUp(String inputFile);
 
     abstract void part1();
 

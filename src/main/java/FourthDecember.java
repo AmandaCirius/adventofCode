@@ -15,9 +15,9 @@ public class FourthDecember extends December {
     private final ArrayList<String> passports = new ArrayList<>();
     private final List<String> rules = Arrays.asList("byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid");
 
-    void setUp(String inputfile) {
+    void setUp(String inputFile) {
         try {
-            final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputfile)));
+            final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputFile)));
             String line;
             StringBuilder stringBuilder = new StringBuilder();
             while ((line = reader.readLine()) != null) {

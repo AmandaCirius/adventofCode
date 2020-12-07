@@ -14,9 +14,9 @@ public class FifthDecember extends December {
     private List<Integer> columns = new ArrayList<>();
     final List<Integer> seatIds = new ArrayList<>();
 
-    void setUp(String inputfile) {
+    void setUp(String inputFile) {
         try {
-            final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputfile)));
+            final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputFile)));
             String line;
             while ((line = reader.readLine()) != null) {
                 boardingPasses.add(line);

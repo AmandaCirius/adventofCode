@@ -8,14 +8,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class SeventhOfDecember extends December{
+public class SeventhOfDecember extends December {
     private final List<String> stupidBagRules = new ArrayList<>();
     private final Set<String> coloredBags = new HashSet<>();
 
-    void setUp(String inputfile) {
+    void setUp(String inputFile) {
         coloredBags.add("shiny gold");
         try {
-            final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputfile)));
+            final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputFile)));
             String line;
             while ((line = reader.readLine()) != null) {
                 stupidBagRules.add(line);

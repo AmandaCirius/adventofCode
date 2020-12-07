@@ -10,9 +10,9 @@ public class FirstDecember extends December {
 
     private final ArrayList<Integer> numbers = new ArrayList<>();
 
-    void setUp(final String inputfile) {
+    void setUp(final String inputFile) {
         try {
-            final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputfile)));
+            final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputFile)));
             String line;
             while ((line = reader.readLine()) != null) {
                 numbers.add(Integer.valueOf(line));

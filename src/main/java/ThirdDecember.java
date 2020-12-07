@@ -20,9 +20,9 @@ public class ThirdDecember extends December {
     int counterSevenOne = 0;
     int counterOneTwo = 0;
 
-    void setUp(final String inputfile) {
+    void setUp(final String inputFile) {
         try {
-            final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputfile)));
+            final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputFile)));
             String line;
             while ((line = reader.readLine()) != null) {
                 String mapLine = line + line + line + line + line + line + line + line + line + line + line + line + line + line + line

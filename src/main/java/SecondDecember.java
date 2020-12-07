@@ -13,9 +13,9 @@ public class SecondDecember extends December {
 
     private final ArrayList<Password> passwords = new ArrayList<>();
 
-    void setUp(final String inputfile) {
+    void setUp(final String inputFile) {
         try {
-            final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputfile)));
+            final BufferedReader reader = new BufferedReader(new InputStreamReader(ClassReader.class.getResourceAsStream(inputFile)));
             String line;
             while ((line = reader.readLine()) != null) {
                 final String[] split = line.split("-");
