@@ -56,5 +56,6 @@ public class SeventhOfDecember extends December{
     }
 
     void part2() {
+
     }
 }
