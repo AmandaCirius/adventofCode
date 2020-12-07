@@ -18,5 +18,6 @@ public class Application {
         //
         //                FifthDecember fifthDecember = new FifthDecember();
         //                fifthDecember.run("/fifthInput.txt");
+        new SeventhOfDecember().run("/seventhinput.txt");
     }
 }
